@@ -27,7 +27,7 @@ client.on("message", (msg) => {
     }
 
     if(["balls", "Balls"].includes(msg.content)) {
-        msg.reply("Soon enough I'll cut off your pair.")
+        msg.reply("Soon enough I'll cut off your sack.")
     }
 
     console.log(msg)
