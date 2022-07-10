@@ -1,3 +1,3 @@
 module.exports.onmessage = function(message, client) {
-    message.channel.send("You rolled a: " + Math.floor(Math.random() * 6 + 1))
+    message.channel.send("You rolled a  :dice:" + Math.floor(Math.random() * 6 + 1))
 }
