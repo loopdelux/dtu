@@ -11,7 +11,7 @@ const client = new Discord.Client({
     ]   
 })
 
-// Command Handler (cred:Raxracks) -----
+// Command Handler ---------------------
 const fs = require('fs')
 let commands = {}
 
