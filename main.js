@@ -11,6 +11,21 @@ const client = new Discord.Client({
     ]   
 })
 
+// Command Handler (cred:Raxracks) -----
+const fs = require('fs')
+let commands = {}
+
+client.on('ready', () => fs.readdirSync('./commands').forEach(command => commands[command.split(".js")[0]] = command))
+
+client.on('message', async message => {
+    let command = message.content.split(' ')[0]
+
+    if(commands[command]) {
+        require(`./commands/${commands[command]}`).onmessage(message, client)
+    }
+})
+//--------------------------------------
+
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`)
     client.user.setActivity(`you.`, {
@@ -18,6 +33,7 @@ client.on("ready", () => {
       });
 })
 
+// Just testing out discord.js
 client.on("message", (msg) => {
 
     if(msg.author.bot) return;
