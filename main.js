@@ -27,13 +27,10 @@ client.on("message", (msg) => {
     }
 
     if(["balls", "Balls"].includes(msg.content)) {
-        msg.reply("River Twygz Bed from Super Paper Mario is my favourite Mario song.")
+        msg.reply("Soon enough I'll cut off your pair.")
     }
 
     console.log(msg)
 })
 
 client.login(config.token)
-
-// LEARN TO PROGRAM JS RETARD
-// client.login(process.env.TOKEN)
