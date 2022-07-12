@@ -19,7 +19,15 @@ client.on('message', async message => {
     let command = message.content.split(' ')[0]
 
     if(commands[command]) {
-        require(`./commands/${commands[command]}`).onmessage(message, client);
+
+        // SUCKS:
+        // require(`./commands/${commands[command]}`).onmessage(message, client);
+
+        try {
+            require(`./commands/${commands[command]}`).onmessage(message, client);
+        } catch (e) {
+            console.log("An error has occured: " + e);
+        }
     }
 });
 
