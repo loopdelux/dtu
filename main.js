@@ -15,7 +15,7 @@ let commands = {};
 
 client.on('ready', () => fs.readdirSync('./commands').forEach(command => commands[command.split(".js")[0]] = command));
 
-client.on('message', async message => {
+client.on('messageCreate', (message) => {
     let command = message.content.split(' ')[0]
 
     if(commands[command]) {
@@ -31,7 +31,7 @@ client.on('message', async message => {
     }
 
     // Log messages in console
-    console.log(msg);
+    console.log(message);
 
 });
 
