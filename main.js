@@ -29,6 +29,10 @@ client.on('message', async message => {
             console.log("An error has occured: " + e);
         }
     }
+
+    // Log messages in console
+    console.log(msg);
+
 });
 
 
@@ -38,11 +42,6 @@ client.on("ready", () => {
     client.user.setActivity(`you.`, {
         type: "WATCHING",
       });
-});
-
-// Logging to console
-client.on("message", (msg) => {
-    console.log(msg);
 });
 
 client.login(config.token);

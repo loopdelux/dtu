@@ -5,7 +5,7 @@ module.exports.onmessage = function(message, client) {
     // message.channel.send(message.author.displayAvatarURL({dynamic : true, size : 4096}));
 
     const avatar = new MessageEmbed()
-        .setColor('#ffffff')
+        .setColor('RANDOM')
         .setTitle(message.author.username + "'s avatar")
         .setImage(message.author.displayAvatarURL({dynamic : true, size : 4096}));
 
